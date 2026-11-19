@@ -24,7 +24,7 @@ const CLUBS = VENUES.map((v) => ({
   slug: v.slug,
   address: v.address,
   city: v.city,
-  waiting: v.is_open && v.table_count > 6,
+  waiting: false,
 }));
 
 const card = (c) => `
@@ -39,9 +39,11 @@ const card = (c) => `
   </a>`;
 
 export function mabar() {
+  // The picker is alphabetical — the "waiting tables" priority only affects
+  // which clubs surface first when some actually have open games.
   const waiting = CLUBS.filter((c) => c.waiting);
   const rest = CLUBS.filter((c) => !c.waiting);
-  const showWaiting = [...waiting, ...rest].slice(0, 8);
+  const shown = (waiting.length ? [...waiting, ...rest] : [...CLUBS].sort((a, b) => a.name.localeCompare(b.name))).slice(0, 12);
 
   return page({
     title: "Mabar",
@@ -60,8 +62,8 @@ export function mabar() {
           </div>
 
           <p class="mt-4 text-xs font-semibold tracking-wide text-ink/45 uppercase">Club dengan meja menunggu, lalu sisanya</p>
-          <div class="mt-3 grid gap-3 sm:grid-cols-2" data-club-grid>${showWaiting.map(card).join("")}</div>
-          <p class="mt-4 text-sm text-ink/50"><span data-club-count>${Math.max(88 - showWaiting.length, 0)}</span> club lainnya — ketik untuk mencari.</p>
+          <div class="mt-3 grid gap-3 sm:grid-cols-2" data-club-grid>${shown.map(card).join("")}</div>
+          <p class="mt-4 text-sm text-ink/50"><span data-club-count>${88 - shown.length}</span> club lainnya — ketik untuk mencari.</p>
         </section>
 
         <section class="border-t border-primary-50 pt-10">

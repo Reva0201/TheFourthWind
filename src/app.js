@@ -208,6 +208,8 @@ function bindVenueSearch() {
   const cards = Array.from(document.querySelectorAll("[data-venue-grid] [data-search]"));
   const empty = document.querySelector("[data-venue-empty]");
   const hint = document.querySelector("[data-venue-hint]");
+  const foot = document.querySelector("[data-venue-footnote]");
+  const base = foot ? foot.textContent : "";
 
   input.addEventListener("input", () => {
     const q = input.value.trim().toLowerCase();
@@ -219,6 +221,7 @@ function bindVenueSearch() {
     });
     if (empty) empty.classList.toggle("hidden", shown > 0);
     if (hint) hint.textContent = q ? `${shown} club cocok dengan “${input.value.trim()}”.` : "Cari dengan nama club, nama jalan, mall, atau daerahnya.";
+    if (foot) foot.textContent = q ? `${shown} dari ${cards.length} club.` : base;
   });
 }
 
@@ -264,21 +267,8 @@ function bindReveal() {
   targets.forEach((t) => io.observe(t));
 }
 
-function bindFaq() {
-  document.querySelectorAll("[data-faq]").forEach((item) => {
-    const btn = item.querySelector("button");
-    const panel = item.querySelector("[data-faq-panel]");
-    if (!btn || !panel) return;
-    btn.addEventListener("click", () => {
-      const open = item.dataset.open === "true";
-      item.dataset.open = String(!open);
-      panel.classList.toggle("hidden", open);
-      btn.setAttribute("aria-expanded", String(!open));
-      const glyph = btn.querySelector("[data-faq-glyph]");
-      if (glyph) glyph.style.transform = open ? "" : "rotate(45deg)";
-    });
-  });
-}
+/* FAQ uses native <details>/<summary>, so there is nothing to bind. */
+function bindFaq() {}
 
 let bindBooking;
 

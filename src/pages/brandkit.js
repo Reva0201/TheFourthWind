@@ -45,6 +45,12 @@ const assetCard = (family, v) => {
       <span class="mr-auto text-xs font-semibold text-ink/60">${v.label}</span>
       <a href="./assets/logo/${file}.svg" download
         class="rounded-lg border border-primary-100 px-3 py-1.5 text-xs font-bold text-primary transition hover:bg-primary-50">SVG</a>
+      <select aria-label="Ukuran PNG untuk ${label}"
+        class="rounded-lg border border-primary-100 bg-white px-2 py-1.5 text-xs font-semibold">
+        <option value="512">512 px</option>
+        <option value="1024">1024 px</option>
+        <option value="2048">2048 px</option>
+      </select>
       <button type="button" data-logo-png="./assets/logo/${file}.svg" data-logo-label="${label}"
         class="rounded-lg bg-primary px-3 py-1.5 text-xs font-bold text-white transition hover:bg-primary-600">PNG</button>
     </div>

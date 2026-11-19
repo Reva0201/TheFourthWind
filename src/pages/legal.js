@@ -50,8 +50,10 @@ const PRIVACY = {
         "Mengirim kode booking, voucher, dan pengingat jadwal ke WhatsApp atau email Anda.",
         "Menampilkan booking Anda di menu Booking Saya dan memudahkan club mencocokkan transfer.",
         "Menjalankan Mabar: memberi tahu Anda ketika kursi meja yang Anda buka atau ikuti sudah penuh.",
+        "Mengirim kabar ketika venue yang Anda tunggu membuka booking online.",
         "Mencegah penyalahgunaan: booking palsu, unggahan bukti transfer yang tidak sah, dan percobaan akses tanpa izin.",
-        "Menyusun laporan internal dalam bentuk agregat untuk memahami halaman dan club mana yang dipakai.",
+        "Menagih biaya layanan kepada club dan menyusun laporan internal dalam bentuk agregat.",
+        "Menjawab pertanyaan Anda dan menangani sengketa pembayaran atau jadwal.",
       ],
     },
     {
@@ -66,6 +68,8 @@ const PRIVACY = {
       body: `
         <p>Data booking dibagikan kepada club yang Anda pilih — hanya bagian yang mereka perlukan untuk mengenali tamu dan mencocokkan transfer: nama, nomor WhatsApp, tipe meja, jadwal, durasi, dan nominal.</p>
         <p>Kami memakai penyedia layanan untuk mengirim email dan pesan WhatsApp, menyimpan berkas, serta menjalankan server. Mereka memproses data atas instruksi kami dan tidak boleh memakainya untuk tujuan lain.</p>
+        <p>Bila Anda mendaftar event atau membuka meja Mabar, nama dan nomor WhatsApp Anda terlihat oleh peserta lain di meja yang sama — itu memang tujuan fiturnya. Jangan mendaftar bila Anda tidak ingin terlihat.</p>
+        <p>Kami dapat membuka data bila diwajibkan hukum atau permintaan resmi yang sah, dan kami akan memberi tahu Anda kecuali dilarang.</p>
         <p>Kami tidak menjual data pribadi dan tidak membagikannya kepada pengiklan.</p>`,
     },
     {
@@ -73,13 +77,17 @@ const PRIVACY = {
       title: "Penyimpanan dan keamanan",
       body: `
         <p>Data akun disimpan selama akun Anda aktif. Catatan transaksi dan bukti transfer disimpan lebih lama karena kewajiban pembukuan dan penyelesaian sengketa dengan club.</p>
-        <p>Kami memakai koneksi terenkripsi, kata sandi sesi yang ditandatangani, dan akses terbatas untuk staf. Tidak ada sistem yang sepenuhnya bebas risiko; bila terjadi kebocoran yang berdampak pada Anda, kami memberi tahu sesuai ketentuan yang berlaku.</p>`,
+        <p>Kami memakai koneksi terenkripsi, kata sandi sesi yang ditandatangani, dan akses terbatas untuk staf. Bukti transfer hanya dapat dilihat oleh staf club yang bersangkutan dan tim kami yang menangani sengketa.</p>
+        <p>Tidak ada sistem yang sepenuhnya bebas risiko; bila terjadi kebocoran yang berdampak pada Anda, kami memberi tahu sesuai ketentuan yang berlaku.</p>`,
     },
     {
       id: "hak",
       title: "Hak Anda",
       body: `
-        <p>Anda berhak meminta salinan data Anda, meminta koreksi data yang keliru, dan meminta penghapusan data yang tidak terikat kewajiban pembukuan. Kirim permintaan ke ${EMAIL}; kami menanggapi dalam waktu yang wajar dan dapat meminta bukti bahwa permintaan datang dari pemilik akun.</p>`,
+        <p>Anda berhak meminta salinan data Anda, meminta koreksi data yang keliru, dan meminta penghapusan data yang tidak terikat kewajiban pembukuan.</p>
+        <p>Anda juga berhak menolak pemrosesan yang bertumpu pada kepentingan sah kami, dan menarik persetujuan yang pernah Anda berikan — misalnya untuk pesan pengingat.</p>
+        <p>Kirim permintaan ke ${EMAIL}; kami menanggapi dalam waktu yang wajar dan dapat meminta bukti bahwa permintaan datang dari pemilik akun.</p>
+        <p>Bila Anda merasa permintaan tidak ditangani dengan semestinya, Anda dapat mengadu kepada lembaga pelindungan data pribadi yang berwenang.</p>`,
     },
     {
       id: "perubahan",
@@ -123,21 +131,29 @@ const TERMS = {
       title: "Pembayaran",
       body: `
         <p>Pembayaran dilakukan <strong>langsung ke rekening club</strong> yang tertera di halaman booking. The Fourth Wind tidak menerima dan tidak menahan uang pemain. Voucher terbit setelah staf club memeriksa dan mengonfirmasi transfer Anda.</p>
-        <p>Biaya layanan platform ditagihkan kepada club, bukan kepada pemain. Harga yang Anda lihat di halaman venue adalah harga sewa meja dari club, termasuk pajak bila club menerapkannya.</p>`,
+        <p>Biaya layanan platform ditagihkan kepada club, bukan kepada pemain. Harga yang Anda lihat di halaman venue adalah harga sewa meja dari club, termasuk pajak bila club menerapkannya.</p>
+        <p>Selama menunggu konfirmasi, meja Anda ditahan. Bila transfer tidak masuk sebelum batas waktu, booking kedaluwarsa dan meja dilepas kembali — Anda bisa booking ulang bila jamnya masih kosong.</p>
+        <p>Pastikan nominal yang Anda transfer sama dengan total yang tertera, termasuk pajak bila club menerapkannya. Selisih akibat biaya transfer bank menjadi tanggungan Anda.</p>
+        <p>Bila Anda terlanjur transfer setelah batas waktu, hubungi club langsung. Selama jamnya belum diambil orang lain, mereka biasanya masih bisa mengaktifkan booking Anda.</p>
+        <p>Harga yang Anda lihat di halaman venue adalah harga sewa meja dari club. The Fourth Wind tidak memungut biaya tambahan, tidak menyimpan saldo, dan tidak menerbitkan faktur atas nama pemain.</p>`,
     },
     {
       id: "kedatangan",
       title: "Kedatangan dan durasi main",
       body: `
         <p>Datanglah sesuai jam yang Anda booking. Meja ditahan sebentar setelah jam mulai; bila Anda tidak datang dalam tenggang waktu yang ditetapkan club, booking dapat ditandai tidak datang dan meja dilepas.</p>
-        <p>Menambah jam bisa dilakukan lewat kasir club selama meja belum dibooking orang lain. Jam tambahan dibayar langsung di tempat dan tidak selalu tercatat sebagai booking di platform.</p>`,
+        <p>Menambah jam bisa dilakukan lewat kasir club selama meja belum dibooking orang lain. Jam tambahan dibayar langsung di tempat dan tidak selalu tercatat sebagai booking di platform.</p>
+        <p>Datang lebih awal tidak menjamin meja langsung kosong — meja baru menjadi milik Anda pada jam yang dibooking.</p>`,
     },
     {
       id: "pembatalan",
       title: "Pembatalan dan pengembalian dana",
       body: `
         <p>Kebijakan pembatalan ditetapkan masing-masing club dan tertera di halaman venue sebelum Anda booking. Karena uang berpindah langsung ke club, pengembalian dana — bila ada — diproses oleh club, bukan oleh kami.</p>
-        <p>Bila club membatalkan jadwal Anda, hubungi club untuk pengembalian dana atau jadwal pengganti. Kami membantu menjembatani, tetapi tidak dapat memaksa keputusan komersial club.</p>`,
+        <p>Bila club membatalkan jadwal Anda, hubungi club untuk pengembalian dana atau jadwal pengganti. Kami membantu menjembatani, tetapi tidak dapat memaksa keputusan komersial club.</p>
+        <p>Bacalah kebijakan itu sebelum transfer, karena kebijakan tersebut yang berlaku bila Anda berubah pikiran.</p>
+        <p>Booking yang kedaluwarsa karena transfer tidak dikonfirmasi bukan pembatalan — tidak ada dana yang berpindah, jadi tidak ada yang perlu dikembalikan.</p>
+        <p>Simpan bukti transfer Anda sampai jadwal main selesai; bukti itu yang dipakai club bila terjadi sengketa.</p>`,
     },
     {
       id: "mabar",
@@ -157,7 +173,8 @@ const TERMS = {
       title: "Pemilik dan staf club",
       body: `
         <p>Pemilik club bertanggung jawab atas kebenaran data venue, harga, jam buka, dan rekening yang ditampilkan; atas konfirmasi transfer; dan atas pelayanan di lokasi. Staf hanya boleh mengakses data tamu untuk keperluan operasional club.</p>
-        <p>Biaya layanan platform, siklus penagihan, dan paket diatur dalam perjanjian terpisah dengan club.</p>`,
+        <p>Biaya layanan platform, siklus penagihan, dan paket diatur dalam perjanjian terpisah dengan club.</p>
+        <p>Club juga wajib menjaga jam buka yang ditampilkan tetap sesuai kenyataan; jadwal yang sudah dibooking pemain tidak boleh dibatalkan sepihak tanpa memberi tahu peserta.</p>`,
     },
     {
       id: "larangan",
@@ -229,14 +246,6 @@ export function legal(kind) {
               </section>`
             )
             .join("")}
-        </div>
-
-        <div class="mt-12 rounded-2xl border border-primary-100 bg-white p-6 shadow-soft">
-          <h2 class="font-display text-lg font-bold">Ada yang mau ditanyakan?</h2>
-          <p class="mt-1 text-sm text-ink/65">
-            Kirim email ke <a href="mailto:halo@thefourthwind.com" class="font-semibold text-primary hover:underline">halo@thefourthwind.com</a>.
-            Kami membaca semuanya, biasanya membalas dalam satu hari kerja.
-          </p>
         </div>
       </main>
     `,

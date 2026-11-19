@@ -148,42 +148,51 @@ function stepsSection() {
 
 /* ---------- venue directory ---------- */
 function venueCard(v, i) {
-  const badge = v.is_open
+  // "Listed" clubs show a status pill and pricing; bare directory entries do not.
+  const badge = v.listed
     ? `<span class="shrink-0 rounded-full px-2.5 py-1 text-xs font-bold bg-primary-50 text-primary-700">Buka</span>`
-    : `<span class="shrink-0 rounded-full px-2.5 py-1 text-xs font-bold bg-ground text-muted">Tutup</span>`;
+    : "";
 
-  const rooms = v.room_types
+  const rooms = (v.room_types ?? [])
     .map((r) => `<span class="rounded-full bg-cream px-2.5 py-1 text-xs font-medium text-ink/70">${r}</span>`)
     .join("");
 
+  const footer = v.listed
+    ? `<span>
+         <span class="text-xs text-ink/50">mulai</span>
+         <span class="block font-display text-lg font-bold">${rupiah(v.price_from)}<span class="text-sm font-normal text-ink/50">/jam</span></span>
+       </span>
+       <span class="text-sm font-semibold text-primary">${v.table_count} meja →</span>`
+    : `<span class="text-sm font-semibold text-gold-dark">Profil venue · booking segera →</span>`;
+
+  // Clubs with an uploaded banner show it; the rest fall back to the tile motif.
+  const cover = v.banner
+    ? `<div class="relative h-28 overflow-hidden rounded-xl bg-primary-800">
+         <img src="${v.banner}" alt="" loading="lazy" class="size-full object-cover transition duration-500 group-hover:scale-105" />
+       </div>`
+    : `<div class="tile-pattern relative grid h-28 place-items-center overflow-hidden rounded-xl bg-primary-800">
+         <span class="absolute -top-8 -right-8 size-28 rounded-full bg-primary-500/30 blur-2xl"></span>
+         <span class="relative font-display text-4xl font-bold text-gold">${v.name.charAt(0)}</span>
+       </div>`;
+
   return `
   <a class="reveal group rounded-2xl border border-primary-100 bg-white p-4 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-lift"
-     href="#/venue/${v.slug}" data-venue="${v.key}"
-     data-search="${[v.name, v.address, v.city, v.description].join(" ").toLowerCase()}"
+     href="#/venue/${v.slug}"
+     data-search="${[v.name, v.address, v.city, v.description || ""].join(" ").toLowerCase()}"
      style="transition-delay:${(i % 3) * 70}ms">
-    <div class="tile-pattern relative grid h-28 place-items-center overflow-hidden rounded-xl bg-primary-800">
-      <span class="absolute -top-8 -right-8 size-28 rounded-full bg-primary-500/30 blur-2xl"></span>
-      <span class="relative font-display text-4xl font-bold text-gold">${v.name.charAt(0)}</span>
-    </div>
+    ${cover}
     <div class="mt-4 flex items-start gap-2">
       <h3 class="flex-1 font-display text-xl font-bold group-hover:text-primary">${v.name}</h3>
       ${badge}
     </div>
-    <p class="mt-1 text-sm text-ink/60">${v.address}, ${v.city}</p>
+    <p class="mt-1 text-sm text-ink/60">${v.address}</p>
     <div class="mt-3 flex flex-wrap gap-1.5">${rooms}</div>
-    <div class="tnum mt-4 flex items-end justify-between border-t border-primary-50 pt-3">
-      <span>
-        <span class="text-xs text-ink/50">mulai</span>
-        <span class="block font-display text-lg font-bold">${rupiah(v.price_from)}<span class="text-sm font-normal text-ink/50">/jam</span></span>
-      </span>
-      <span class="text-sm font-semibold text-primary">${v.table_count} meja →</span>
-    </div>
+    <div class="tnum mt-4 flex items-end justify-between border-t border-primary-50 pt-3">${footer}</div>
   </a>`;
 }
 
 function directory() {
-  const cards = VENUES.map(venueCard).join("");
-  return `
+  const cards = VENUES.map(venueCard).join("");  return `
   <section id="venue" class="border-y border-primary-50 bg-white py-16 sm:py-24">
     <div class="mx-auto max-w-7xl px-4 sm:px-6">
       <h2 class="reveal font-display text-3xl font-bold sm:text-4xl">Club mahjong pilihan di sekitar kamu</h2>
@@ -247,19 +256,19 @@ function ownerStrip() {
 function faq() {
   const items = FAQ.map(
     (f, i) => `
-    <div class="reveal rounded-2xl border border-primary-100 bg-white shadow-soft" data-faq data-open="false" style="transition-delay:${i * 50}ms">
-      <button type="button" aria-expanded="false" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left">
-        <span class="font-medium">${f.q}</span>
-        <span data-faq-glyph class="grid size-7 shrink-0 place-items-center rounded-full bg-primary-50 text-primary transition-transform duration-200">${icon.plus}</span>
-      </button>
-      <div data-faq-panel class="hidden px-5 pb-5 text-ink/70">${f.a}</div>
-    </div>`
+    <details class="reveal group rounded-2xl border border-primary-100 bg-white shadow-soft" style="transition-delay:${i * 60}ms">
+      <summary class="flex cursor-pointer list-none items-center gap-4 p-5 font-semibold">
+        <span class="flex-1">${f.q}</span>
+        <span class="grid size-7 shrink-0 place-items-center rounded-full bg-primary-50 text-primary transition-transform duration-200 group-open:rotate-45">${icon.plus}</span>
+      </summary>
+      <p class="px-5 pb-5 text-ink/65">${f.a}</p>
+    </details>`
   ).join("");
 
   return `
   <section id="faq" class="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-24">
     <h2 class="reveal text-center font-display text-3xl font-bold sm:text-4xl">Pertanyaan yang sering masuk</h2>
-    <div class="mt-10 flex flex-col gap-3">${items}</div>
+    <div class="mt-8 flex flex-col gap-3">${items}</div>
   </section>`;
 }
 
@@ -267,15 +276,13 @@ function faq() {
 function closing() {
   return `
   <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24">
-    <div class="relative overflow-hidden rounded-2xl bg-primary-900 px-6 py-14 text-center sm:px-12 sm:py-16">
+    <div class="reveal relative overflow-hidden rounded-3xl bg-primary-800 p-8 text-center sm:p-14">
       <div class="tile-pattern absolute inset-0 opacity-70" aria-hidden="true"></div>
-      <div class="absolute -top-32 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" aria-hidden="true"></div>
+      <div class="absolute -top-20 left-1/2 size-96 -translate-x-1/2 rounded-full bg-gold/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative">
-        <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Malam ini masih ada meja kosong.</h2>
-        <p class="mx-auto mt-2 max-w-md text-white/70">Kunci jamnya sebelum diambil orang lain.</p>
-        <div class="mt-7">
-          <a href="#venue" data-scroll="venue" class="inline-block rounded-xl bg-gold px-6 py-3.5 font-bold text-primary-900 shadow-lift transition hover:bg-gold-light">Booking meja sekarang</a>
-        </div>
+        <h2 class="font-display text-3xl font-bold text-balance text-white sm:text-4xl">Malam ini masih ada meja kosong.</h2>
+        <p class="mt-3 text-white/70">Kunci jamnya sebelum diambil orang lain.</p>
+        <a href="#venue" data-scroll="venue" class="mt-7 inline-block rounded-xl bg-gold px-7 py-4 font-bold text-primary-900 shadow-lift transition hover:bg-gold-light">Booking meja sekarang</a>
       </div>
     </div>
   </section>`;

@@ -1,0 +1,821 @@
+[
+ {
+  "n": "Angin Timur Mahjong Club",
+  "s": "angin-timur-mahjong-club",
+  "a": "Ruko Taman Palem Lestari Blok B2 No. 17, Cengkareng, Jakarta Barat, Jakarta Barat",
+  "p": 55000,
+  "t": 8,
+  "r": [
+   "Meja Manual",
+   "Meja Otomatis"
+  ],
+  "listed": true,
+  "bookable": true,
+  "banner": "./assets/banner/angin-timur.svg",
+  "mabar": false
+ },
+ {
+  "n": "Angin Timur Mahjong Club Puri",
+  "s": "angin-timur-mahjong-club-puri",
+  "a": "Jl. Puri Kencana Blok Z No 999, Jakarta Barat",
+  "p": 85000,
+  "t": 18,
+  "r": [
+   "Meja Manual",
+   "Meja Otomatis"
+  ],
+  "listed": true,
+  "bookable": false,
+  "mabar": false
+ },
+ {
+  "n": "Mah Bar (Mahjong Bareng)",
+  "s": "mah-bar-mahjong-bareng",
+  "a": "Ruko The Hudson Blok D No. 16, Gading Serpong, Tangerang Serpong",
+  "p": 75000,
+  "t": 12,
+  "r": [
+   "Meja Reguler",
+   "Ruang VIP"
+  ],
+  "listed": true,
+  "bookable": true,
+  "mabar": false
+ },
+ {
+  "n": "MahjongQu",
+  "s": "mahjongqu",
+  "a": "Venue demo online — bukan lokasi fisik, Jakarta Pusat",
+  "p": 60000,
+  "t": 12,
+  "r": [
+   "Meja Manual",
+   "Meja Otomatis"
+  ],
+  "listed": true,
+  "bookable": true,
+  "banner": "./assets/banner/mahjongqu.svg",
+  "mabar": false
+ },
+ {
+  "n": "Young Mahjong",
+  "s": "young-mahjong",
+  "a": "Hampton Avenue No. B2/73, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 45000,
+  "t": 6,
+  "r": [
+   "Meja Otomatis"
+  ],
+  "listed": true,
+  "bookable": false,
+  "wa": "6287885078508",
+  "mabar": true
+ },
+ {
+  "n": "369 Mahjong Lounge PIK 2",
+  "s": "369-mahjong-lounge-pik-2",
+  "a": "Jl. Manhattan / Jl. Wall Street I No.30, Lantai 3, Kosambi Barat, Kosambi, Kabupaten Tangerang, Banten 15213, Tangerang PIK 2",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "88 Mahjong Social Club",
+  "s": "88-mahjong-social-club",
+  "a": "Jl. Taman Pluit Permai Timur No.2, RT.5/RW.5, Pluit, Penjaringan, Jakarta Utara, DKI Jakarta 14450, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Alpes Gaming Cafe",
+  "s": "alpes-gaming-cafe",
+  "a": "Jl. Pondok Kacang No.35, RT.001/RW.03, Pondok Kacang Barat, Pondok Aren, Tangerang Selatan, Banten 15226, Tangerang Bintaro",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Amang Coffee & Mabar Gaming",
+  "s": "amang-coffee-mabar-gaming",
+  "a": "Jl. Bulak Raya No.56, RT.3/RW.7, Klender, Duren Sawit, Jakarta Timur, DKI Jakarta 13470, Jakarta Timur",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Arcanum Hobbies Bintaro (Dragon House)",
+  "s": "arcanum-hobbies-bintaro-dragon-house",
+  "a": "SHIJI at Dragon House Lt.2, Jl. Merpati IV.8 Blok P3, RT.6/RW.8, Bintaro, Pesanggrahan, Jakarta Selatan, DKI Jakarta 12330, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Arcanum Hobbies Taman Puring",
+  "s": "arcanum-hobbies-taman-puring",
+  "a": "SHIJI at Dragon House Lt.2, Jl. Merpati IV.8 Blok P3, RT.6/RW.8, Bintaro, Pesanggrahan, Jakarta Selatan, DKI Jakarta 12330, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Bakmi 777",
+  "s": "bakmi-777",
+  "a": "Ruko Madison Grande, Blok J No.36, Gading Serpong, Pagedangan, Kab. Tangerang, Kab. Tangerang",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Batavia Mahjong Circle @ Hotel Des Indes Menteng",
+  "s": "batavia-mahjong-circle-at-hotel-des-indes-menteng",
+  "a": "Paloma Restaurant, Hotel Des Indes, Jl. HOS. Cokroaminoto No.84-86, RT.3/RW.5, Menteng, Jakarta Pusat, DKI Jakarta 10310, Jakarta Pusat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Castle 8 Boardgame Cafe",
+  "s": "castle-8-boardgame-cafe",
+  "a": "Depok Town Square Ground Floor, Jl. Margonda Raya, Pondok Cina, Beji, Kota Depok, Jawa Barat 16425, Depok",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Clue Board Game Cafe",
+  "s": "clue-board-game-cafe",
+  "a": "Jl. Pluit Mas II No.1A Blok B, RT.1/RW.18, Pejagalan, Penjaringan, Jakarta Utara, DKI Jakarta 14450, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "DICE Boardgame & Kitchen",
+  "s": "dice-boardgame-kitchen",
+  "a": "Jl. Boulevard Raya No.18 Blok FX1, RT.8/RW.13, Kelapa Gading Timur, Kelapa Gading, Jakarta Utara, DKI Jakarta 14240, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Didadu Boardgame Arena & Cafe",
+  "s": "didadu-boardgame-arena-cafe",
+  "a": "Jl. Tanjung Duren Barat 1 No.15B, RT.12/RW.4, Tanjung Duren Utara, Grogol Petamburan, Jakarta Barat, DKI Jakarta 11470, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Domain Board Game Cafe",
+  "s": "domain-board-game-cafe",
+  "a": "Ruko The Icon Business Park Blok J No.3, Jl. Raya Cisauk Lapan, Sampora, Cisauk, Tangerang Selatan, Banten 15345, Tangerang BSD",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Dots Board Game Cafe",
+  "s": "dots-board-game-cafe",
+  "a": "Ruko Golf Island, Jl. Pantai Indah Kapuk No.25-26 Blok H, Kamal Muara, Penjaringan, Jakarta Utara, DKI Jakarta 14470, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "DoubleXP Board Game Cafe",
+  "s": "doublexp-board-game-cafe",
+  "a": "Ruko Hudson Gading Serpong Blok A58, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "DRI Mahjong",
+  "s": "dri-mahjong",
+  "a": "Jl. AMD Manunggal V Gg. Saiyan 1 No.11, RT.6/RW.10, Petukangan Utara, Pesanggrahan, Jakarta Selatan, DKI Jakarta 12260, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Eat and Play Cafe",
+  "s": "eat-and-play-cafe",
+  "a": "Jl. Raya Semplak No.27S, RT.02/RW.01, Semplak, Bogor Barat, Kota Bogor, Jawa Barat 16114, Bogor",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "FACAI Mahjong Lounge",
+  "s": "facai-mahjong-lounge",
+  "a": "Ruko Maggiore Square, Jl. Springs Boulevard No.61, Cihuni, Pagedangan, Kabupaten Tangerang, Banten 15332, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Game Start Chill Station",
+  "s": "game-start-chill-station",
+  "a": "Jl. Curug Agung No.49, RT.01/RW.06, Tanah Baru, Kota Depok, Jawa Barat 16426, Depok",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Gameopoly Board Game Cafe",
+  "s": "gameopoly-board-game-cafe",
+  "a": "Ruko Melody 2, Jl. Melody II MLDD 32-33, Medang, Pagedangan, Kabupaten Tangerang, Banten 15810, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Games On Cafe",
+  "s": "games-on-cafe",
+  "a": "BSD City Sektor 1.1 Blok RF3 No.12A, Rawa Buntu, Serpong, Tangerang Selatan, Banten 15322, Tangerang BSD",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Gerbera's Corner",
+  "s": "gerberas-corner",
+  "a": "Jl. Pulo Ribung Raya Kav.4, RT.003/RW.017, Jaka Setia, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "GO Mahjong Alam Sutera (Kula Courts)",
+  "s": "go-mahjong-alam-sutera-kula-courts",
+  "a": "Jl. Jalur Sutera Barat Kav.16, RT.002/RW.003, Panunggangan Timur, Pinang, Kota Tangerang, Banten 15143, Tangerang Alam Sutera",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Goblin Hut Board Game Ground",
+  "s": "goblin-hut-board-game-ground",
+  "a": "Jl. Puri Indah Raya / Jl. Kembang Indah II, RT.6/RW.6, Kembangan Selatan, Kembangan, Jakarta Barat, DKI Jakarta 11610, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Good Game Board Game Cafe & Store",
+  "s": "good-game-board-game-cafe-store",
+  "a": "Flavor Bliss Lt.2, Jl. Alam Sutera Boulevard Kav.11 Parampam, Pakulonan, Serpong Utara, Tangerang Selatan, Banten 15325, Tangerang Alam Sutera",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Grouplay Boardgame Shop Gandaria City",
+  "s": "grouplay-boardgame-shop-gandaria-city",
+  "a": "Gandaria City Lt.2, Jl. Sultan Iskandar Muda No.223, RT.10/RW.6, Kebayoran Lama Utara, Kebayoran Lama, Jakarta Selatan, DKI Jakarta 12240, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "HAKKEN",
+  "s": "hakken",
+  "a": "RT.004/RW.017, Jaka Setia, Bekasi Selatan, Kota Bekasi, Jawa Barat 17147, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Hambel Society Space",
+  "s": "hambel-society-space",
+  "a": "Jl. Raya Kp. Setu, RT.001/RW.001, Bintara Jaya, Bekasi Barat, Kota Bekasi, Jawa Barat 17136, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Hobby Hub - Boardgame & Mahjong",
+  "s": "hobby-hub-boardgame-mahjong",
+  "a": "Plaza Pacific, Rukan No.43 Blok A2, RT.18/RW.8, Kelapa Gading Barat, Kelapa Gading, Jakarta Utara, DKI Jakarta 14350, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Hompimpa Board Game Cafe",
+  "s": "hompimpa-board-game-cafe",
+  "a": "RT.02/RW.07, Muarasari, Bogor Selatan, Kota Bogor, Jawa Barat 16137, Bogor",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Hopeng Mahjong Parlor",
+  "s": "hopeng-mahjong-parlor",
+  "a": "Ruko Evergreen, Suvarna Sutera Blok B No.7, Wanakerta, Sindang Jaya, Kabupaten Tangerang, Banten 15560, Tangerang Suvarna Sutera",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Hu Mahjong Place",
+  "s": "hu-mahjong-place",
+  "a": "Ruko Maggiore Grande, Jl. Springs Boulevard No.23 Blok B, Gading, Serpong, Kabupaten Tangerang, Banten 15332, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Ichigo Ichie Board Games Cafe",
+  "s": "ichigo-ichie-board-games-cafe",
+  "a": "Ruko Golden 8 Blok H No.02, Pakulonan Barat, Kelapa Dua, Kabupaten Tangerang, Banten 15810, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Justy Juice Cafe and Board Game",
+  "s": "justy-juice-cafe-and-board-game",
+  "a": "Ruko Grand Galaxy City, Jl. Pulo Ribung No.03 Blok RGL, RT.001/RW.020, Jaka Setia, Bekasi Selatan, Kota Bekasi, Jawa Barat 17148, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "King Mahjong GS",
+  "s": "king-mahjong-gs",
+  "a": "Ruko Hudson Blok G.11, Jl. Jenderal Gatot Subroto No.53, Medang, Pagedangan, Kabupaten Tangerang, Banten 15335, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Komunitas Riichi Mahjong Jakarta",
+  "s": "komunitas-riichi-mahjong-jakarta",
+  "a": "c/o Clue Board Game Cafe, Jl. Pluit Mas II No.1A Blok B, RT.1/RW.18, Pejagalan, Penjaringan, Jakarta Utara, DKI Jakarta 14450, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Kuup Boardgame Cafe Greenville",
+  "s": "kuup-boardgame-cafe-greenville",
+  "a": "Jl. Green Ville Blok BK No.8C, RT.8/RW.14, Duri Kepa, Kebon Jeruk, Jakarta Barat, DKI Jakarta 11510, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "LAI Mahjong (来)",
+  "s": "lai-mahjong",
+  "a": "Ruko Verona Junction Gading Serpong, Jl. Jenderal Gatot Subroto Blok E.8, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Lucky Mahjong Serpong",
+  "s": "lucky-mahjong-serpong",
+  "a": "Ruko Madison Grande Blok L No.29, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Lugua Board Game - Grand Indonesia",
+  "s": "lugua-board-game-grand-indonesia",
+  "a": "Grand Indonesia, Jl. M.H. Thamrin No.1, Kebon Melati, Tanah Abang, Jakarta Pusat, DKI Jakarta 10310, Jakarta Pusat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Mahjong Class @ TMG Hotel Tebet (Kanteen & Co.)",
+  "s": "mahjong-class-at-tmg-hotel-tebet-kanteen-co",
+  "a": "Jl. Dr. Saharjo No.194-196, RT.4/RW.5, Menteng Dalam, Tebet, Jakarta Selatan, DKI Jakarta 12960, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Mahjong Society",
+  "s": "mahjong-master-88",
+  "a": "Jl. Sunset Avenue No.8, Blok K06A, RT.6/RW.4, Pegadungan, Kalideres, Jakarta Barat, DKI Jakarta 11830, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "MARS Playhouse Boardgame Cafe",
+  "s": "mars-playhouse-boardgame-cafe",
+  "a": "Jl. Raya Rawa Bugel No.3, RT.006/RW.003, Marga Mulya, Bekasi Utara, Kota Bekasi, Jawa Barat 17142, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "MAZE Board Game Cafe",
+  "s": "maze-board-game-cafe",
+  "a": "Jl. Kelapa Hibrida Raya PF18 No.9, RT.10/RW.3, Pegangsaan Dua, Kelapa Gading, Jakarta Utara, DKI Jakarta 14250, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Meeple Story Board Game Cafe",
+  "s": "meeple-story-board-game-cafe",
+  "a": "Ruko Asiatic 3 A3, Jl. Permata Sari No.15, Binong, Curug, Kabupaten Tangerang, Banten 15810, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Midgard Games and Cafe",
+  "s": "midgard-games-and-cafe",
+  "a": "Jl. Krekot Bunder Raya No.47, RT.4/RW.6, Pasar Baru, Sawah Besar, Jakarta Pusat, DKI Jakarta 10710, Jakarta Pusat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Monopolis Board Game Store & Cafe HUB Harapan Indah",
+  "s": "monopolis-board-game-store-cafe-hub-harapan-indah",
+  "a": "Ruko Blok AT No.17, Jl. Raya Asia Tropis, Harapan Indah, Tarumajaya, Bekasi, Jawa Barat 17132, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Natural Twenty Boardgame Cafe",
+  "s": "natural-twenty-boardgame-cafe",
+  "a": "Ruko Ruby Commercial Estate, Jl. Bulevar Selatan Blok TD No.09, RT.004/RW.011, Marga Mulya, Bekasi Utara, Kota Bekasi, Jawa Barat 17143, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Nexa Mahjong",
+  "s": "nexa-mahjong",
+  "a": "Rukan Sentra Niaga, Jl. Green Lake City Boulevard Blok K-01, RT.7/RW.8, Duri Kosambi, Cengkareng, Jakarta Barat, DKI Jakarta 11750, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Nexa Mahjong & Billiard",
+  "s": "nexa-mahjong-billiard",
+  "a": "Rukan Sentra Niaga, Jl. Green Lake City Boulevard Blok K-01, RT.7/RW.8, Duri Kosambi, Cengkareng, Jakarta Barat, DKI Jakarta 11750, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Nongkee House",
+  "s": "nongkee-house",
+  "a": "Jl. Raya Pekayon (seberang SPBU Pertamina), RT.002/RW.002, Jatiasih, Bekasi Selatan, Kota Bekasi, Jawa Barat 17147, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "NWS Corner",
+  "s": "nws-corner",
+  "a": "Ruko Grand Galaxy City Blok RRGB 8 & 10, RT.01/RW.014, Jaka Setia, Bekasi Selatan, Kota Bekasi, Jawa Barat 17147, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Oryx Boardgame Lounge",
+  "s": "oryx-boardgame-lounge",
+  "a": "Citra 8 Aeroworld, Aerolink Boulevard Blok K1 No.9, RT.6/RW.4, Pegadungan, Kalideres, Jakarta Barat, DKI Jakarta 11830, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Othello Indonesia",
+  "s": "othello-indonesia",
+  "a": "Po Koresh, Jl. Raya Karanggan No.183, Karanggan, Gunung Putri, Kabupaten Bogor, Jawa Barat 16960, Bogor",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Papan Hobbies Board Game Cafe BSD",
+  "s": "papan-hobbies-board-game-cafe-bsd",
+  "a": "Piazza The Mozia Blok E8 No.10, Lengkong Kulon, Pagedangan, Kabupaten Tangerang, Banten 15339, Tangerang BSD",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Papan Hobbies Cafe and Co Hub",
+  "s": "papan-hobbies-cafe-and-co-hub",
+  "a": "Piazza The Mozia Blok E8 No.10, Lengkong Kulon, Pagedangan, Kabupaten Tangerang, Banten 15339, Tangerang BSD",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Pauw Mahjong",
+  "s": "pauw-mahjong",
+  "a": "Ruko .... BLok.. no ..., Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "PLAY Mahjong",
+  "s": "play-mahjong",
+  "a": "The Royal Springhill Residences, Lobby Marygold, Pademangan Timur, Pademangan, Jakarta Utara, DKI Jakarta 14410, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Poly Board Games Cafe",
+  "s": "poly-board-games-cafe",
+  "a": "Jl. Jati Murni No.8, RT.3/RW.7, Jati Padang, Pasar Minggu, Jakarta Selatan, DKI Jakarta 12540, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Pong Mahjong Jakarta",
+  "s": "pong-mahjong-jakarta",
+  "a": "Pantai Indah Kapuk St, Penjaringan, Jakarta Utara, DKI Jakarta 14460, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Pong! Dragon Mahjong Citra 8",
+  "s": "pong-dragon-mahjong-citra-8",
+  "a": "Ruko Madison Grande Blok L No.80, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Pong! Dragon Mahjong Gading Serpong",
+  "s": "pong-dragon-mahjong-gading-serpong",
+  "a": "Ruko Madison Grande Blok L No.80, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Roemah Mahjong",
+  "s": "roemah-mahjong",
+  "a": "Ruko Aniva Blok GE No.22, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "ROOT Cafe & Boardgames",
+  "s": "root-cafe-boardgames",
+  "a": "Jl. Nusa Dua Raya, Limo, Kota Depok, Jawa Barat 16512, Depok",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Royal Gaming",
+  "s": "royal-gaming",
+  "a": "Jl. Mayor Madmuin Hasibuan No.46, RT.004/RW.004, Margahayu, Bekasi Timur, Kota Bekasi, Jawa Barat 17113, Bekasi",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Ruang Mahjong Sunter",
+  "s": "ruang-mahjong-sunter",
+  "a": "Jl. Danau Indah Barat, RT.9/RW.13, Sunter Jaya, Tanjung Priok, Jakarta Utara, DKI Jakarta 14360, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "Rumah Maciok Mahjong Parlor",
+  "s": "rumah-maciok-mahjong-parlor",
+  "a": "Jl. Danau Agung 2 No.15A Blok C18, RT.12/RW.11, Sunter Agung, Tanjung Priok, Jakarta Utara, DKI Jakarta 14350, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Sini Duduk Hobby Store",
+  "s": "sini-duduk-hobby-store",
+  "a": "The Boulevard Office Unit 2D2, Jl. H. Fachrudin No.5, RT.1/RW.7, Kampung Bali, Tanah Abang, Jakarta Pusat, DKI Jakarta 10250, Jakarta Pusat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "SPACE PADEL PIK2",
+  "s": "space-padel-pik2",
+  "a": "Jl. H.R. Rasuna Said Blok BB, Salembaran, Kosambi, Kabupaten Tangerang, Banten 15214, Tangerang PIK 2",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Sumo Mahjong",
+  "s": "sumo-mahjong",
+  "a": "Ruko Faraday DB/25, Gading, Serpong, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Tenpai Mahjong & Board Game Cafe",
+  "s": "tenpai-mahjong-board-game-cafe",
+  "a": "Ruko Hudson Gading Serpong Blok F No.08, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": false
+ },
+ {
+  "n": "The Bunker Board Game Cafe & Store",
+  "s": "the-bunker-board-game-cafe-store",
+  "a": "Jl. Graha Boulevard Timur, Curug Sangereng, Kelapa Dua, Kabupaten Tangerang, Banten 15810, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "The Mahjong Circles",
+  "s": "the-mahjong-circles",
+  "a": "Ruko Hudson Square, Jl. Jenderal Gatot Subroto Blok B9, Medang, Pagedangan, Kabupaten Tangerang, Banten 15334, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "The Quarters Board Game Lounge",
+  "s": "the-quarters-board-game-lounge",
+  "a": "Rukan Golf Island, Pantai Indah Kapuk St No.17 Blok L, Penjaringan, Jakarta Utara, DKI Jakarta 14470, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "The Tile Social - Board Game & Mahjong Lounge",
+  "s": "the-tile-social-board-game-mahjong-lounge",
+  "a": "2nd Floor, Soul Padel Club, Grogol Utara, Kebayoran Lama, Jakarta Selatan, DKI Jakarta, Jakarta Selatan",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "The Vault Board Game Cafe - Jakarta",
+  "s": "the-vault-board-game-cafe-jakarta",
+  "a": "Jl. Tanjung Duren Barat IV No.25, RT.10/RW.6, Tanjung Duren Utara, Grogol Petamburan, Jakarta Barat, DKI Jakarta 11470, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Tomo Board Game Cafe",
+  "s": "tomo-board-game-cafe",
+  "a": "Jl. KH. Hasyim Ashari No.52C, RT.17/RW.3, Petojo Utara, Gambir, Jakarta Pusat, DKI Jakarta 10130, Jakarta Pusat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Tongkrongan BO-GEM Board Game Cafe Depok",
+  "s": "tongkrongan-bo-gem-board-game-cafe-depok",
+  "a": "Jl. Kp. Parung Serab No.51, Tirtajaya, Sukmajaya, Kota Depok, Jawa Barat 16412, Depok",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Tujiro Mahjong Club",
+  "s": "tujiro-mahjong-club",
+  "a": "Jl. Danau Indah Barat No.7, RT.5/RW.13, Sunter Jaya, Tanjung Priok, Jakarta Utara, DKI Jakarta 14360, Jakarta Utara",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Twins Board Game Cafe",
+  "s": "twins-board-game-cafe",
+  "a": "Jl. Kusuma D8 No.3, RT.11/RW.9, Wijaya Kusuma, Grogol Petamburan, Jakarta Barat, DKI Jakarta 11460, Jakarta Barat",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Valhalla Gaming + Movie Cafe",
+  "s": "valhalla-gaming-movie-cafe",
+  "a": "Jl. Raya Cibanteng No.19, Cihideung Ilir, Ciampea, Kabupaten Bogor, Jawa Barat 16620, Bogor",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Wan Mahjong",
+  "s": "wan-mahjong",
+  "a": "Ruko Madison Grande Blok M No.11, Medang, Pagedangan, Kabupaten Tangerang, Banten 15331, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ },
+ {
+  "n": "Yu! Mahjong",
+  "s": "yu-mahjong",
+  "a": "Ruko South Goldfinch SGD, Jl. Springs Boulevard No.08, Cihuni, Pagedangan, Kabupaten Tangerang, Banten 15332, Tangerang Serpong",
+  "p": 0,
+  "t": 0,
+  "r": [],
+  "mabar": true
+ }
+]
