@@ -1,0 +1,16 @@
+{
+  "name": "the-fourth-wind",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "The Fourth Wind — hourly mahjong table booking. Front-end replica.",
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/app.css -o ./dist/app.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/app.css -o ./dist/app.css --minify",
+    "serve": "npx http-server -p 4173 -c-1 ."
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

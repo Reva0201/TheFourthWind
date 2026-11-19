@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="96" viewBox="0 0 380 96" role="img" aria-label="The Fourth Wind">
+  <rect x="0" y="16" width="64" height="64" rx="15" fill="#d4a24c"/>
+  <text x="32" y="62" text-anchor="middle" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="700" font-size="35" fill="#052a1f">風</text>
+  <text x="80" y="60" font-family="Fraunces, Georgia, 'Times New Roman', serif" font-weight="700" font-size="30" fill="#052a1f">The Fourth<tspan fill="#a97b2c"> Wind</tspan></text>
+</svg>
