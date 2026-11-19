@@ -76,16 +76,12 @@ function slotSection(v, room, index) {
 
 const fmt = (n) => new Intl.NumberFormat("id-ID").format(n);
 
-/* ---------- booking summary ---------- */
-function summary(v, room, hour, hours) {
-  const unit = priceForHour(room.base, hour);
-  const gross = unit * hours;
-  const parts = splitPrice(gross, { tax_bp: v.tax_rate_bp, inclusive: true });
-
+/* ---------- booking summary (only rendered after a slot is chosen) ---------- */
+function summaryShell(v) {
   return `
-  <div id="ringkasan" class="mt-10 scroll-mt-24 overflow-hidden rounded-2xl border border-primary-100 bg-white shadow-lift">
+  <div id="ringkasan" class="mt-10 hidden scroll-mt-24 overflow-hidden rounded-2xl border border-primary-100 bg-white shadow-lift">
     <div class="border-b border-primary-50 bg-cream px-5 py-4">
-      <h2 class="font-display text-lg font-bold" data-summary-title>${room.name} · ${hour} · ${hours} jam</h2>
+      <h2 class="font-display text-lg font-bold" data-summary-title></h2>
     </div>
     <div class="p-5">
       <div class="flex items-center gap-3">
@@ -93,17 +89,17 @@ function summary(v, room, hour, hours) {
         <div class="flex items-center gap-2">
           <button type="button" data-dur="-1" aria-label="Kurangi jam"
             class="size-10 rounded-xl border border-primary-100 text-lg font-bold hover:bg-cream">−</button>
-          <span class="tnum w-12 text-center font-display text-lg font-bold" data-dur-value>${hours}j</span>
+          <span class="tnum w-12 text-center font-display text-lg font-bold" data-dur-value></span>
           <button type="button" data-dur="1" aria-label="Tambah jam"
             class="size-10 rounded-xl border border-primary-100 text-lg font-bold hover:bg-cream">+</button>
         </div>
       </div>
 
       <dl class="tnum mt-5 flex flex-col gap-2 border-t border-primary-50 pt-4 text-sm">
-        <div class="flex justify-between"><dt class="text-ink/60">Sewa meja</dt><dd data-line-subtotal>${rupiah(parts.net)}</dd></div>
-        <div class="flex justify-between"><dt class="text-ink/60">PB1 (termasuk)</dt><dd data-line-tax>${rupiah(parts.tax)}</dd></div>
+        <div class="flex justify-between"><dt class="text-ink/60">Sewa meja</dt><dd data-line-subtotal></dd></div>
+        <div class="flex justify-between"><dt class="text-ink/60">PB1 (termasuk)</dt><dd data-line-tax></dd></div>
         <div class="flex justify-between border-t border-primary-50 pt-2 font-display text-lg font-bold">
-          <dt>Total transfer</dt><dd data-line-total>${rupiah(parts.gross)}</dd>
+          <dt>Total transfer</dt><dd data-line-total></dd>
         </div>
       </dl>
 
@@ -168,7 +164,7 @@ export function venue(path) {
       <main class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         ${dateStrip()}
         ${rooms.map((r, i) => slotSection(v, r, i)).join("")}
-        ${summary(v, rooms[0], "20:00", v.min_booking_hours)}
+        ${summaryShell(v)}
       </main>
       ${details(v)}
     `,
@@ -181,29 +177,44 @@ export function venue(path) {
 
 /* ---------- interactions ---------- */
 function initBooking(v, rooms) {
-  const state = { roomId: rooms[0].id, hour: "20:00", hours: v.min_booking_hours };
+  /* Nothing is selected until the visitor picks a slot. */
+  const state = { roomId: null, hour: null, hours: v.min_booking_hours };
 
   const room = () => rooms.find((r) => r.id === state.roomId) ?? rooms[0];
+  const chosen = () => state.roomId !== null && state.hour !== null;
+
+  /* The chosen block covers `hours` consecutive slots, exactly like the
+     original: pick 20:00 with a 2-hour minimum and 20:00 + 21:00 light up. */
+  const covered = (roomId, hour) => {
+    if (!chosen() || Number(roomId) !== state.roomId) return false;
+    const start = HOURS.indexOf(state.hour);
+    const idx = HOURS.indexOf(hour);
+    return idx >= start && idx < start + state.hours;
+  };
 
   const paint = () => {
+    const panel = document.getElementById("ringkasan");
+    const on = chosen();
+
+    panel?.classList.toggle("hidden", !on);
+    if (!on) return;
+
     const r = room();
     const unit = priceForHour(r.base, state.hour);
     const parts = splitPrice(unit * state.hours, { tax_bp: v.tax_rate_bp, inclusive: true });
 
     document.querySelectorAll("[data-slot]").forEach((b) => {
-      const on = Number(b.dataset.room) === r.id && b.dataset.hour === state.hour;
-      b.classList.toggle("border-primary", on);
-      b.classList.toggle("bg-primary", on);
-      b.classList.toggle("text-white", on);
-      b.classList.toggle("shadow-soft", on);
-      b.classList.toggle("border-primary-100", !on);
-      b.classList.toggle("bg-white", !on);
-      b.setAttribute("aria-pressed", String(on));
+      const active = covered(b.dataset.room, b.dataset.hour);
+      b.classList.toggle("border-primary", active);
+      b.classList.toggle("bg-primary", active);
+      b.classList.toggle("text-white", active);
+      b.classList.toggle("shadow-soft", active);
+      b.classList.toggle("border-primary-100", !active);
+      b.classList.toggle("bg-white", !active);
+      b.setAttribute("aria-pressed", String(active));
     });
 
-    const title = document.querySelector("[data-summary-title]");
-    if (title) title.textContent = `${r.name} · ${state.hour} · ${state.hours} jam`;
-
+    set("[data-summary-title]", `${r.name} · ${state.hour} · ${state.hours} jam`);
     set("[data-dur-value]", `${state.hours}j`);
     set("[data-line-subtotal]", rupiah(parts.net));
     set("[data-line-tax]", rupiah(parts.tax));
@@ -211,7 +222,8 @@ function initBooking(v, rooms) {
 
     document.querySelectorAll("[data-dur]").forEach((b) => {
       const next = state.hours + Number(b.dataset.dur);
-      b.disabled = next < v.min_booking_hours || next > 8;
+      const last = HOURS.indexOf(state.hour) + next;
+      b.disabled = next < v.min_booking_hours || next > 8 || last > HOURS.length;
       b.classList.toggle("opacity-40", b.disabled);
     });
   };
@@ -232,8 +244,10 @@ function initBooking(v, rooms) {
 
   document.querySelectorAll("[data-dur]").forEach((b) =>
     b.addEventListener("click", () => {
+      if (!chosen()) return;
       const next = state.hours + Number(b.dataset.dur);
       if (next < v.min_booking_hours || next > 8) return;
+      if (HOURS.indexOf(state.hour) + next > HOURS.length) return;
       state.hours = next;
       paint();
     })
@@ -249,6 +263,16 @@ function initBooking(v, rooms) {
       b.classList.add("border-primary", "bg-primary", "text-white", "shadow-soft");
       b.classList.remove("border-primary-100", "bg-white");
       b.setAttribute("aria-selected", "true");
+
+      // Switching day clears the time choice, as on the original site.
+      state.roomId = null;
+      state.hour = null;
+      document.querySelectorAll("[data-slot]").forEach((s) => {
+        s.classList.remove("border-primary", "bg-primary", "text-white", "shadow-soft");
+        s.classList.add("border-primary-100", "bg-white");
+        s.setAttribute("aria-pressed", "false");
+      });
+      paint();
     })
   );
 
